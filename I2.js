@@ -26,10 +26,15 @@ const tester = {
   name: "Software Tester",
   attendMeeting: () => console.log("Attending meeting..."),
 };
+const empTypes = [developer, designer, tester];
+empTypes.forEach((e) => {
+  if (e.name === "Software Developer") {
+    e.code();
+  } else if (e.name === "UI Designer") {
+    e.design();
+  } else if (e.name === "Software Tester") {
+    e.test();
+  }
+  e.attendMeeting();
+});
 // call the functions
-performCoding(developer);
-performDesigning(designer);
-performTesting(tester);
-performMeeting(developer);
-performMeeting(designer);
-performMeeting(tester);
